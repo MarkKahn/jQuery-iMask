@@ -71,6 +71,10 @@
 				.bind( "keypress", function(){ self.onKeyPress.apply(self, arguments); } )
 				.bind( "focus",    function(){ self.onFocus   .apply(self, arguments); } )
 				.bind( "blur",     function(){ self.onBlur    .apply(self, arguments); } );
+
+			setTimeout( function(){
+				self[ self.options.type === "fixed" ? 'selectFirst' : 'setEnd' ]();
+			}, 1 );
 		},
 
 		isFixed  : function(){ return this.options.type == 'fixed';  },
