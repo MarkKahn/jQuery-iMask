@@ -4,6 +4,9 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 	<script type="text/javascript" src="../source/jquery.imask.js"></script>
 	<script type="text/javascript">
+	function removeMask() {
+		$("#inp5").unbind('.iMask');
+	}
 	$(function(){
 		$('#inp1').iMask({
 			type : 'number'
@@ -29,6 +32,11 @@
 		    , mask      : '[99.999.999-x]'
 		    , stripMask : true
 		})
+
+		$('#inp5').iMask({
+			type : 'number'
+		})
+
 	});
 	</script>
 
@@ -39,6 +47,23 @@
 	}
 	input {
 		font-family : courier;
+	}
+	a.btn {
+		display:inline-block;
+		font-weight:bold;
+		font-size:12px;
+		text-align:center;
+		padding-left:10px;
+		padding-right:10px;
+		padding-top:3px;
+		padding-bottom:4px;
+		text-decoration:none;
+		margin-left:5px;
+		margin-top:0px;
+		margin-bottom:5px;
+		border:1px solid #aaaaaa;
+		border-radius:5px;
+		white-space:nowrap;
 	}
 	</style>
 
@@ -51,5 +76,8 @@
 	<label>0-1000000: </label><input id="inp3">
 	<br />
 	<label>[99.999.999-x]: </label><input id="inp4">
+	<br />
+	<label>Removable: </label><input id="inp5">
+	<a href="javascript:void(0)" class="btn" onclick="removeMask()">Click to Remove</a>
 </body>
 </html>
