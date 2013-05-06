@@ -64,13 +64,13 @@
 			if(options.type == "number") this.node.css("text-align", "right");
 
 			this.node
-				.bind( "mousedown click", function(ev){ ev.stopPropagation(); ev.preventDefault(); } )
+				.bind( "mousedown.iMask click.iMask", function(ev){ ev.stopPropagation(); ev.preventDefault(); } )
 
-				.bind( "mouseup",  function(){ self.onMouseUp .apply(self, arguments); } )
-				.bind( "keydown",  function(){ self.onKeyDown .apply(self, arguments); } )
-				.bind( "keypress", function(){ self.onKeyPress.apply(self, arguments); } )
-				.bind( "focus",    function(){ self.onFocus   .apply(self, arguments); } )
-				.bind( "blur",     function(){ self.onBlur    .apply(self, arguments); } );
+				.bind( "mouseup.iMask",  function(){ self.onMouseUp .apply(self, arguments); } )
+				.bind( "keydown.iMask",  function(){ self.onKeyDown .apply(self, arguments); } )
+				.bind( "keypress.iMask", function(){ self.onKeyPress.apply(self, arguments); } )
+				.bind( "focus.iMask",    function(){ self.onFocus   .apply(self, arguments); } )
+				.bind( "blur.iMask",     function(){ self.onBlur    .apply(self, arguments); } );
 		},
 
 		isFixed  : function(){ return this.options.type == 'fixed';  },
