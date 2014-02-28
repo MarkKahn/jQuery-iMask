@@ -8,7 +8,7 @@
 
 ## Demos
 
-  http://cwolves.github.com/jQuery-iMask/
+  http://zyklus.github.com/jQuery-iMask/
 
 ## Example
 
